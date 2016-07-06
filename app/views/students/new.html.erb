@@ -1,12 +1,15 @@
 <!-- Create your form here -->
- <h1>New Student:</h1>
+ <h1>Student Form:</h1>
 
- <% form_tag student_path do %>
- <label for="student">First Name</label>
+ <%= form_tag students_path do %>
+ <label>First Name</label>
    <%=text_field_tag :first_name %> <br>
 
-  <label for="student">Last Name</label>
-  <%= text_field_tag :last_name %> <br>
-  <%submit_tag "Submit Student "%>
+  <label>Last Name</label>
+  <%= text_field_tag :last_name %> <br><br>
+
+  <!-- <%= hidden_field_tag :authenticity_token, form_authenticity_token %> -->
+
+  <%= submit_tag "Submit Student "%>
 
  <% end %>

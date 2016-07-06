@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_action :set_student, only: :show
 
   def index
     @students = Student.all
@@ -9,6 +10,7 @@ class StudentsController < ApplicationController
   end
 
   def new
+    @student = Student.new
   end
 
   def create
