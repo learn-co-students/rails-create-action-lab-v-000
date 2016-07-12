@@ -7,5 +7,9 @@
   <label>Last name:</label><br>
   <%= text_field_tag :last_name %><br>
 
+ <!-- 
+ "we can remove the manual authenticity token call since that is generated automatically through the form_tag helper"
+-->
+
   <%= submit_tag "Submit Student" %>
 <% end %>
