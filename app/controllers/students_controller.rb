@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  
+
   def index
     @students = Student.all
   end
@@ -12,6 +12,17 @@ class StudentsController < ApplicationController
   end
 
   def create
-  end
+    @student = Student.new
+    @student.first_name = params[:first_name]
+    @student.last_name = params[:last_name]
+    @student.save
+    redirect_to student_path(@student)
+ end
+ # why this is not passing?
+  # def create
+  #   @student=Student.create(first_name:params[:first_name],last_name:params[:last_name])
+  #   redirect_to students_path(@student)
+  # end
+
 
 end
