@@ -1,4 +1,4 @@
-# Create Action Lab
+ho# Create Action Lab
 
 1. Build a working `create` action
 2. Use a `form_tag` to create a new form that submits to the `index` action
