@@ -41,7 +41,7 @@ describe 'form page' do
     fill_in 'last_name', with: "Stark"
 
     click_on "Submit Student"
-
+    
     expect(Student.last.first_name).to eq("Sansa")
   end
 end
