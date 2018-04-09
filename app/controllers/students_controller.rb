@@ -18,6 +18,8 @@ class StudentsController < ApplicationController
     @student.last_name = params[:last_name]
     @student.save
     redirect_to student_path(@student)
+    #get '/students' = student_path
+    #redirect_to show page for new student instance: student_path(@student) = student_path(@student.id) 
   end
 
 end
