@@ -15,7 +15,6 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.create(first_name: params[:first_name], last_name: params[:last_name])
-    redirect_to student_path(@student) #note students is plural, meaning going to show all students, ie index. 
-  end
+    redirect_to student_path(@student) #you would use students_path to go to index; note the plural (s)
 
 end
