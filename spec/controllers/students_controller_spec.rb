@@ -16,5 +16,4 @@ describe StudentsController do
       end
     end
   end
-
 end

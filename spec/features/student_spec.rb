@@ -7,6 +7,7 @@ describe 'Route to view' do
   end
 end
 
+
 describe 'Multiple students' do
   it 'shows them on the index page' do
     Student.create!(first_name: "Daenerys", last_name: "Targaryen")
