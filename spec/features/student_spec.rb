@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'pry'
 describe 'Route to view' do
   it 'has an index page' do
     visit students_path
@@ -20,7 +20,9 @@ end
 describe 'form page' do
   it 'form renders with the new action' do
     visit new_student_path
+  
     expect(page).to have_content("Student Form")
+    
   end
 
   it 'new form submits content and renders form content' do
