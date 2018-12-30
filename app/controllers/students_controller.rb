@@ -1,5 +1,7 @@
+require 'pry'
+
 class StudentsController < ApplicationController
-  
+
   def index
     @students = Student.all
   end
@@ -9,9 +11,18 @@ class StudentsController < ApplicationController
   end
 
   def new
+    @student = Student.new
   end
 
   def create
+    # @student = Student.create(first_name: params[:first_name], last_name: params[:last_name])
+    @student = Student.new
+    @student.first_name = params[:first_name]
+    @student.last_name = params[:last_name]
+    @student.save
+    redirect_to student_url(@student)
   end
+
+
 
 end
