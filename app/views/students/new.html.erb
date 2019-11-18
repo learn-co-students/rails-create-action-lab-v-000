@@ -1,1 +1,15 @@
 <!-- Create your form here -->
+<h2>New Student Form</h2>
+
+<%= form_tag students_path do %>
+  <%= label_tag "first_name", "First Name:" %>
+  <%= text_field_tag "first_name" %><br><br>
+
+  <%= label_tag "last_name", "Last Name:" %>
+  <%= text_field_tag "last_name" %><br><br>
+
+  <!-- Here's how to change the id (setting the value to nil first): -->
+  <%#= text_field_tag "last_name", nil, id: "boo" %>
+  
+  <%= submit_tag "Submit Student" %>
+<% end %>
